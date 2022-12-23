@@ -1,0 +1,42 @@
+package collection;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class LinkedListEg1
+{
+	public static void main(String[] args) {
+		LinkedList<String> l1= new LinkedList<String>(); //creating list
+		l1.add("Misbah");
+		l1.add("Abhishek");
+		l1.add("Atif");
+		l1.add("Niladri");
+		l1.add("Soumya");
+		l1.add("Sourav");
+		System.out.println(l1);
+		Iterator <String> itr = l1.iterator();
+		while(itr.hasNext())  {
+			System.out.println(itr.next()); 
+			//Adding an element at the specific position
+			l1.add(2,"Nisha"); // add(int index, element)
+			System.err.println("After Adding : "+l1);
+			LinkedList<String> l2=new LinkedList<String>();
+			l2.add("Peso");
+			l2.add("Shifa");
+			l2.add("Elijah");
+			System.out.println("List 2 elements : "+l2);
+			//Adding all 2nd list elements to the 1st list
+			l1.addAll(l2);
+			System.out.println("After adding all the elements of list 2 : "+" "+l1);
+			//Adding all 2nd list elements  to the 1st list at a specific position
+			l1.addAll(2,l2);
+			System.out.println("After adding all elements of list 2 at specific position : "+l1);
+			//Adding element at the first position
+			l2.addFirst("Pallabi");
+			System.out.println("Add elements at 1st : "+" "+l2);
+			//Adding element at last position
+			l2.addLast("Subhajit");
+			System.out.println("Add elements at last : "+" "+l2);
+		}
+		}}
+	
